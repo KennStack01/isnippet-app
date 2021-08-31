@@ -5,7 +5,7 @@ const Footer = () => {
     <div>
       <footer className="">
         <a
-          className="flex items-center justify-center"
+          className="flex items-center justify-center text-white"
           href="https://www.twitter.com/KennKibadi"
           target="_blank"
           rel="noopener noreferrer"

@@ -6,23 +6,23 @@ import Link from "next/link";
 const LandingPage = () => {
   return (
     <div>
-      <div className="flex flex-row my-10">
-        <div className="flex flex-col">
-          <h1 className="text-5xl font-bold text-white">
-            👋 Welcome to <span className="text-broom-500">snippet.so</span>
+      <div className="flex flex-row my-2 md:my-10">
+        <div className="">
+          <h1 className="text-3xl md:text-5xl font-semibold md:font-bold text-white">
+            👋welcome to <span className="text-broom-500">snippet.so</span>
           </h1>
-          <p className="text-white text-lg font-medium my-10 mx-auto">
+          <p className="text-white text-md md:text-lg text-ju font-medium my-10 mx-0">
             Snippet.so is a place where you can save and share your code
             snippets with the world. <br /> Come, Save, Share and Discover
             Others' Snippets.
           </p>
-          <div className="flex flex-row justify-center my-5">
-            <button className="bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 text-white font-semibold p-2 text-2xl mx-2 rounded-2xl">
+          <div className="flex flex-row justify-center my-5 text-md md:text-2xl ">
+            <button className="bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 text-white font-semibold p-2 mx-2 rounded-xl">
               <Link href="/signup">
                 <a> Get Started </a>
               </Link>
             </button>
-            <button className="hover:underline text-white font-semibold text-2xl mx-2">
+            <button className="hover:underline text-white font-semibold mx-2">
               <Link href="/login">
                 <a>Login</a>
               </Link>

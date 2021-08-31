@@ -3,11 +3,47 @@ import Image from "next/image";
 import ComputerCoding from "../public/SignupPicture.jpg";
 
 import { HiLockClosed } from "react-icons/hi";
+import { FcGoogle } from "react-icons/fc";
 
 export default function Signup() {
   return (
-    <div className="flex flex-row">
-      <div className="flex items-center w-1/2 justify-center rounded-lg bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
+    <div className="md:flex flex-row my-8 md:my-10 mx-3 md:mx-5">
+      <div className="items-center justify-center rounded-lg bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
+        <div>
+          <h1 className="my-3 text-center text-lg font-semibold text-gray-900">
+            Sign in with
+          </h1>
+          <div className="flex flex-col">
+            {/* Google */}
+            <button className="bg-white shadow mx-auto px-10 font-semibold py-2 my-3 rounded">
+              <div className="flex flex-row ">
+                <FcGoogle className="my-auto text-3xl" />
+                <h3 className="text-gray-800 text-md font-medium my-auto mx-2">
+                  Login with Google
+                </h3>
+              </div>
+            </button>
+            {/* Twitter */}
+            <button className="bg-white shadow mx-auto px-10 font-semibold py-2 my-3 rounded">
+              <div className="flex flex-row ">
+                <FcGoogle className="my-auto text-3xl" />
+                <h3 className="text-gray-800 text-md font-medium my-auto mx-2">
+                  Login with Twitter
+                </h3>
+              </div>
+            </button>
+            {/* Github */}
+            <button className="bg-white shadow mx-auto px-10 font-semibold py-2 my-3 rounded">
+              <div className="flex flex-row ">
+                <FcGoogle className="my-auto text-3xl" />
+                <h3 className="text-gray-800 text-md font-medium my-auto mx-2">
+                  Login with Github
+                </h3>
+              </div>
+            </button>
+          </div>
+        </div>
+
         <div className="max-w-md w-full space-y-8">
           <div>
             {/* <img
@@ -15,9 +51,9 @@ export default function Signup() {
             src="https://tailwindui.com/img/logos/workflow-mark-blue-600.svg"
             alt="Workflow"
           /> */}
-            <h2 className="mt-3 text-center text-3xl font-extrabold text-gray-900">
-              Sign in to your account
-            </h2>
+            <h1 className="my-3 text-center text-xl font-semibold text-gray-900">
+              {/* Or */}
+            </h1>
             {/* <p className="mt-2 text-center text-sm text-gray-600">
             Or{" "}
             <a
@@ -28,7 +64,7 @@ export default function Signup() {
             </a>
           </p> */}
           </div>
-          <form className="mt-8 space-y-6" action="#" method="POST">
+          {/* <form className="mt-8 space-y-6" action="#" method="POST">
             <input type="hidden" name="remember" defaultValue="true" />
             <div className="rounded-md shadow-sm -space-y-px">
               <div>
@@ -45,6 +81,7 @@ export default function Signup() {
                   placeholder="Email address"
                 />
               </div>
+
               <div>
                 <label htmlFor="password" className="sr-only">
                   Password
@@ -101,10 +138,10 @@ export default function Signup() {
                 Create Account
               </button>
             </div>
-          </form>
+          </form> */}
         </div>
       </div>
-      <div className="w-1/2">
+      {/* <div className="md:w-1/2 invisible md:visible">
         <Image
           src={ComputerCoding}
           alt="Photo by Lewis Kang'ethe Ngugi on Unsplash"
@@ -112,7 +149,7 @@ export default function Signup() {
           loading="lazy"
           className=" rounded-lg"
         />
-      </div>
+      </div> */}
     </div>
   );
 }
