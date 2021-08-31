@@ -4,18 +4,29 @@ import ComputerCoding from "../public/SignupPicture.jpg";
 
 import { HiLockClosed } from "react-icons/hi";
 import { FcGoogle } from "react-icons/fc";
+import { FaTwitter, FaGithub } from "react-icons/fa";
+
+import firebase from "../firebase/clientApp";
 
 export default function Signup() {
+  // Configure FirebaseUI.
+  const uiConfig = {
+    // Redirect to / after sign in is successful. Alternatively you can provide a callbacks.signInSuccess function.
+    signInSuccessUrl: "/",
+    // We will display GitHub as auth providers.
+    signInOptions: [firebase.auth.GithubAuthProvider.PROVIDER_ID],
+  };
+
   return (
     <div className="md:flex flex-row my-8 md:my-10 mx-3 md:mx-5">
       <div className="items-center justify-center rounded-lg bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
         <div>
-          <h1 className="my-3 text-center text-lg font-semibold text-gray-900">
-            Sign in with
+          <h1 className="my-3 text-center text-lg font-medium text-gray-600">
+            Login
           </h1>
           <div className="flex flex-col">
             {/* Google */}
-            <button className="bg-white shadow mx-auto px-10 font-semibold py-2 my-3 rounded">
+            <button className="bg-white shadow-sm hover:shadow-lg mx-auto px-10 font-semibold py-2 my-3 rounded-lg">
               <div className="flex flex-row ">
                 <FcGoogle className="my-auto text-3xl" />
                 <h3 className="text-gray-800 text-md font-medium my-auto mx-2">
@@ -24,19 +35,27 @@ export default function Signup() {
               </div>
             </button>
             {/* Twitter */}
-            <button className="bg-white shadow mx-auto px-10 font-semibold py-2 my-3 rounded">
-              <div className="flex flex-row ">
-                <FcGoogle className="my-auto text-3xl" />
-                <h3 className="text-gray-800 text-md font-medium my-auto mx-2">
+            <button
+              className="bg-white shadow-sm hover:shadow-lg mx-auto px-10 font-semibold py-2 my-3 rounded-lg"
+              style={{ background: "#1DA1F2" }}
+            >
+              <div className="flex flex-row text-white ">
+                <FaTwitter className="my-auto text-3xl" />
+                <h3 className="text-md font-medium my-auto mx-2">
                   Login with Twitter
                 </h3>
               </div>
             </button>
             {/* Github */}
-            <button className="bg-white shadow mx-auto px-10 font-semibold py-2 my-3 rounded">
-              <div className="flex flex-row ">
-                <FcGoogle className="my-auto text-3xl" />
-                <h3 className="text-gray-800 text-md font-medium my-auto mx-2">
+            <button
+              className="bg-white shadow-sm hover:shadow-lg mx-auto px-10 font-semibold py-2 my-3 rounded-lg"
+              style={{ background: "#211F1F" }}
+              uiConfig={uiConfig}
+              firebaseAuth={firebase.auth()}
+            >
+              <div className="flex flex-row text-white">
+                <FaGithub className="my-auto text-3xl" />
+                <h3 className=" text-md font-medium my-auto mx-2">
                   Login with Github
                 </h3>
               </div>

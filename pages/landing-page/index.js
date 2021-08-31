@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Webpage from "../../public/webpage.png";
 import Link from "next/link";
+import { IoLogInOutline } from "react-icons/io";
 
 const LandingPage = () => {
   return (
@@ -17,16 +18,18 @@ const LandingPage = () => {
             Others' Snippets.
           </p>
           <div className="flex flex-row justify-center my-5 text-md md:text-2xl ">
-            <button className="bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 text-white font-semibold p-2 mx-2 rounded-xl">
-              <Link href="/signup">
-                <a> Get Started </a>
+            <button className="bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50 text-white font-semibold p-2 mx-2 rounded-lg">
+              <Link href="/auth">
+                <a>
+                  <span>Quick Access </span>
+                </a>
               </Link>
             </button>
-            <button className="hover:underline text-white font-semibold mx-2">
+            {/* <button className="hover:underline text-white font-semibold mx-2">
               <Link href="/login">
                 <a>Login</a>
               </Link>
-            </button>
+            </button> */}
           </div>
         </div>
         {/* <Image
@@ -38,8 +41,8 @@ const LandingPage = () => {
         /> */}
       </div>
       <div>
-        <h2 className="mx-auto text-white text-3xl font-semibold mt-10">
-          Features
+        <h2 className="mx-auto text-white text-xl font-semibold mt-10">
+          - Features -
         </h2>
       </div>
     </div>

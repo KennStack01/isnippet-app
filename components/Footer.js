@@ -5,13 +5,12 @@ const Footer = () => {
     <div>
       <footer className="">
         <a
-          className="flex items-center justify-center text-white"
+          className="flex items-center justify-center text-xs text-white"
           href="https://www.twitter.com/KennKibadi"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Created by @KennKibadi{" "}
-          {/* <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" /> */}
+          <h3>Created by @KennKibadi </h3>
         </a>
       </footer>
     </div>
